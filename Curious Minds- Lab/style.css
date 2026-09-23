@@ -1,0 +1,1925 @@
+/* =========================================
+   CURIOUS MINDS
+   Private Teaching & Tutoring
+   ========================================= */
+
+:root {
+    --cream: #f5f2eb;
+    --paper: #fbfaf7;
+    --ink: #252724;
+    --muted: #686b65;
+    --line: #d9d6ce;
+
+    --orange: #ef6b3f;
+    --blue: #315f73;
+    --green: #4e6650;
+    --yellow: #d9b849;
+    --purple: #66516d;
+
+    --display: "Bree Serif", Georgia, serif;
+    --sans: "Quicksand", Arial, Helvetica, sans-serif;
+
+    --max-width: 1100px;
+    --wide-width: 1280px;
+}
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+
+/* =========================================
+   GLOBAL
+   ========================================= */
+
+.container {
+    width: min(var(--max-width), calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 55px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.section-label span {
+    color: var(--orange);
+    font-family: monospace;
+    font-size: 10px;
+}
+
+h1,
+h2 {
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+h1 em,
+h2 em {
+    font-family: var(--display);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.text-link {
+    display: inline-block;
+
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 3px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 21px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-dark {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.button-light {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.site-header {
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+}
+
+.header-inner {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--ink);
+}
+
+.header-button {
+    padding: 10px 16px;
+
+    border: 1px solid var(--ink);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   HOME HERO
+   ========================================= */
+
+.hero {
+    padding: 120px 0 135px;
+    background: var(--cream);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.hero h1 {
+    max-width: 800px;
+    margin-top: 18px;
+
+    font-size: clamp(54px, 7vw, 82px);
+}
+
+.hero h1 em {
+    display: block;
+}
+
+.hero-text {
+    max-width: 610px;
+    margin-top: 30px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+.hero-note {
+    display: flex;
+    justify-content: center;
+}
+
+.idea-paper {
+    position: relative;
+
+    width: 360px;
+    min-height: 400px;
+
+    padding: 34px;
+
+    background: var(--paper);
+
+    border: 1px solid var(--line);
+
+    transform: rotate(2deg);
+
+    box-shadow: 12px 12px 0 rgba(37, 39, 36, 0.08);
+}
+
+.paper-label {
+    font-family: monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+}
+
+.idea-paper h2 {
+    margin-top: 50px;
+
+    font-size: 42px;
+    line-height: 1.02;
+}
+
+.idea-paper h2 em {
+    color: var(--orange);
+}
+
+.paper-line {
+    width: 80px;
+
+    margin-top: 35px;
+
+    border-top: 2px solid var(--orange);
+}
+
+.idea-paper p {
+    max-width: 250px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.paper-arrow {
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+
+    color: var(--orange);
+
+    font-size: 28px;
+}
+
+
+/* =========================================
+   ABOUT
+   ========================================= */
+
+.about {
+    padding: 135px 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 110px;
+}
+
+.about h2 {
+    max-width: 600px;
+    font-size: clamp(48px, 6vw, 70px);
+}
+
+.about-copy p {
+    margin-bottom: 22px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   LEARNING
+   ========================================= */
+
+.learning {
+    padding: 135px 0;
+    background: var(--cream);
+}
+
+.learning-intro {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 110px;
+    align-items: end;
+
+    margin-bottom: 80px;
+}
+
+.learning h2 {
+    font-size: clamp(48px, 6vw, 70px);
+}
+
+.learning-intro > p {
+    max-width: 450px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border-top: 1px solid var(--line);
+}
+
+.approach-item {
+    padding: 28px 25px 10px 0;
+    margin-right: 25px;
+
+    border-right: 1px solid var(--line);
+}
+
+.approach-item:last-child {
+    border-right: 0;
+}
+
+.approach-item span {
+    color: var(--orange);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.approach-item h3 {
+    margin-top: 28px;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.approach-item p {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SERVICES
+   ========================================= */
+
+.services {
+    padding: 135px 0;
+}
+
+.services-heading {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 110px;
+    align-items: end;
+
+    margin-bottom: 75px;
+}
+
+.services h2 {
+    font-size: clamp(48px, 6vw, 70px);
+}
+
+.services-heading p {
+    max-width: 460px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+.service-list {
+    border-top: 1px solid var(--line);
+}
+
+.service-row {
+    display: grid;
+    grid-template-columns: 70px 1fr 30px;
+    gap: 20px;
+    align-items: start;
+
+    padding: 30px 0;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.service-row > span:first-child {
+    color: var(--orange);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.service-row h3 {
+    font-size: 22px;
+}
+
+.service-row p {
+    max-width: 650px;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.service-arrow {
+    color: var(--muted);
+}
+
+.row-label {
+    margin-top: 0 !important;
+
+    color: var(--orange) !important;
+
+    font-family: monospace;
+    font-size: 9px !important;
+    letter-spacing: 0.08em;
+}
+
+.featured-row {
+    background: var(--cream);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.featured-row .text-link {
+    margin-top: 18px;
+}
+
+
+/* =========================================
+   STATEMENT
+   ========================================= */
+
+.statement {
+    padding: 125px 0;
+
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.statement-grid {
+    display: grid;
+    grid-template-columns: 70px 1fr 0.55fr;
+    gap: 35px;
+}
+
+.statement-number {
+    color: var(--yellow);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.statement-main h2 {
+    max-width: 720px;
+
+    font-size: clamp(45px, 5.5vw, 70px);
+}
+
+.statement-main h2 em {
+    color: var(--yellow);
+}
+
+.statement-side {
+    padding-left: 30px;
+
+    border-left: 1px solid rgba(251, 250, 247, 0.2);
+}
+
+.statement-side p {
+    margin-bottom: 22px;
+
+    color: rgba(251, 250, 247, 0.7);
+
+    font-size: 14px;
+}
+
+.statement-side strong {
+    color: var(--paper);
+}
+
+
+/* =========================================
+   CONTACT
+   ========================================= */
+
+.contact {
+    padding: 135px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 110px;
+}
+
+.contact h2 {
+    max-width: 700px;
+
+    font-size: clamp(48px, 6vw, 70px);
+}
+
+.contact-copy {
+    padding-top: 10px;
+}
+
+.contact-copy p {
+    max-width: 500px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+.contact-copy .button {
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   BUSINESS LAB HERO
+   ========================================= */
+
+.business-hero {
+    padding: 110px 0 0;
+    background: var(--cream);
+}
+
+.business-hero h1 {
+    margin-top: 20px;
+
+    font-size: clamp(70px, 11vw, 135px);
+    letter-spacing: -0.07em;
+}
+
+.business-hero-subtitle {
+    max-width: 680px;
+
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.offer-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin-top: 70px;
+
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+}
+
+.offer-strip > div {
+    min-height: 105px;
+
+    padding: 22px 25px;
+
+    border-right: 1px solid var(--line);
+}
+
+.offer-strip > div:last-child {
+    border-right: none;
+}
+
+.offer-strip span {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: var(--muted);
+
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+}
+
+.offer-strip strong {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   BUSINESS INTRO
+   ========================================= */
+
+.business-intro {
+    padding: 125px 0;
+}
+
+.business-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    gap: 110px;
+}
+
+.business-intro h2 {
+    max-width: 600px;
+
+    font-size: clamp(48px, 6vw, 72px);
+}
+
+.business-intro-copy p {
+    margin-bottom: 22px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   LAB PROCESS
+   ========================================= */
+
+.lab-process {
+    padding: 125px 0;
+
+    background: var(--cream);
+}
+
+.lab-process-heading {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 110px;
+
+    margin-bottom: 75px;
+}
+
+.lab-process-heading h2 {
+    font-size: clamp(48px, 6vw, 72px);
+}
+
+.lab-process-heading p {
+    align-self: end;
+
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+.lab-timeline {
+    border-top: 1px solid var(--ink);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid var(--line);
+}
+
+.timeline-number {
+    font-family: monospace;
+    font-size: 11px;
+}
+
+.timeline-content {
+    max-width: 700px;
+}
+
+.timeline-content > span {
+    color: var(--muted);
+
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+}
+
+.timeline-content h3 {
+    margin-top: 8px;
+
+    font-size: 27px;
+}
+
+.timeline-content p {
+    max-width: 620px;
+
+    margin-top: 8px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.business-step .timeline-number {
+    color: var(--orange);
+}
+
+.product-step .timeline-number {
+    color: var(--green);
+}
+
+.market-step .timeline-number {
+    color: var(--blue);
+}
+
+
+/* =========================================
+   BUSINESS PATHWAYS
+   ========================================= */
+
+.business-pathways {
+    padding: 125px 0 0;
+}
+
+.business-pathway-heading {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 110px;
+
+    margin-bottom: 65px;
+}
+
+.business-pathway-heading h2 {
+    font-size: clamp(48px, 6vw, 72px);
+}
+
+.business-pathway-heading p {
+    color: var(--muted);
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   BUSINESS CARDS
+   ========================================= */
+
+.business-cards {
+    width: min(var(--wide-width), calc(100% - 48px));
+
+    margin: auto;
+
+    border-top: 1px solid var(--ink);
+}
+
+.business-card {
+    border-bottom: 1px solid var(--ink);
+    background: var(--cream);
+}
+
+.business-card-head {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 80px 210px 1fr 50px;
+    gap: 20px;
+    align-items: center;
+
+    padding: 30px;
+
+    border: none;
+    background: transparent;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.business-card-head:hover {
+    background: var(--paper);
+}
+
+.business-card-number {
+    color: var(--muted);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.business-card-title span {
+    color: var(--muted);
+
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+}
+
+.business-card-title h3 {
+    margin-top: 2px;
+
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.business-card-description {
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+.business-expand {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--ink);
+
+    font-family: monospace;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.business-card.open .business-expand {
+    transform: rotate(45deg);
+
+    background: var(--ink);
+    color: var(--paper);
+}
+
+
+/* COLORS */
+
+.maker .business-card-title h3 {
+    color: var(--orange);
+}
+
+.baker .business-card-title h3 {
+    color: var(--yellow);
+}
+
+.nature .business-card-title h3 {
+    color: var(--green);
+}
+
+.curator .business-card-title h3 {
+    color: var(--blue);
+}
+
+
+/* =========================================
+   BUSINESS CARD BODY
+   ========================================= */
+
+.business-card-body {
+    display: none;
+
+    padding: 0 30px 45px 330px;
+
+    animation: openBusinessCard 0.25s ease;
+}
+
+.business-card.open .business-card-body {
+    display: block;
+}
+
+@keyframes openBusinessCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.business-card-lead {
+    max-width: 680px;
+
+    padding-top: 25px;
+    margin-bottom: 30px;
+
+    border-top: 1px dashed var(--line);
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.business-ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.business-ideas > div {
+    min-height: 170px;
+
+    padding: 23px;
+
+    background: var(--paper);
+
+    border: 1px solid var(--line);
+}
+
+.business-ideas h4 {
+    margin-bottom: 14px;
+
+    color: var(--muted);
+
+    font-family: monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+}
+
+.business-ideas p {
+    color: #484741;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SKILLS
+   ========================================= */
+
+.skills-section {
+    padding: 135px 0;
+}
+
+.skills-heading {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 110px;
+
+    margin-bottom: 70px;
+}
+
+.skills-heading h2 {
+    font-size: clamp(48px, 6vw, 70px);
+}
+
+.skills-heading p {
+    align-self: end;
+
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid var(--line);
+}
+
+.skill {
+    min-height: 220px;
+
+    padding: 27px 25px 25px 0;
+
+    margin-right: 25px;
+
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.skill:nth-child(3n) {
+    border-right: none;
+}
+
+.skill span {
+    color: var(--orange);
+
+    font-family: monospace;
+    font-size: 10px;
+}
+
+.skill h3 {
+    margin-top: 28px;
+
+    font-size: 19px;
+}
+
+.skill p {
+    max-width: 260px;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MARKET
+   ========================================= */
+
+.market {
+    padding: 125px 0;
+
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.market-inner {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 110px;
+}
+
+.market h2 {
+    margin-top: 18px;
+
+    font-size: clamp(55px, 7vw, 82px);
+}
+
+.market h2 em {
+    color: var(--yellow);
+}
+
+.market-copy {
+    padding-top: 45px;
+}
+
+.market-copy p {
+    margin-bottom: 22px;
+
+    color: rgba(251, 250, 247, 0.7);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   PARENT VALUE
+   ========================================= */
+
+.parent-section {
+    padding: 135px 0;
+}
+
+.parent-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 110px;
+}
+
+.parent-grid h2 {
+    font-size: clamp(48px, 6vw, 70px);
+}
+
+.parent-grid > div p {
+    margin-bottom: 22px;
+
+    color: var(--muted);
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   ENROLLMENT
+   ========================================= */
+
+.enrollment {
+    padding: 125px 0;
+
+    background: var(--cream);
+}
+
+.enrollment-card {
+    display: grid;
+    grid-template-columns: 1fr 0.65fr;
+    gap: 70px;
+
+    padding: 55px;
+
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.enrollment-main h2 {
+    max-width: 650px;
+
+    margin-top: 18px;
+
+    font-size: clamp(48px, 6vw, 72px);
+}
+
+.enrollment-main h2 em {
+    color: var(--yellow);
+}
+
+.enrollment-main > p:last-child {
+    max-width: 570px;
+
+    margin-top: 25px;
+
+    color: rgba(251, 250, 247, 0.7);
+
+    font-size: 15px;
+}
+
+.enrollment-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 22px;
+
+    padding-left: 35px;
+
+    border-left: 1px solid rgba(251, 250, 247, 0.2);
+}
+
+.enrollment-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid rgba(251, 250, 247, 0.15);
+}
+
+.enrollment-details span {
+    color: rgba(251, 250, 247, 0.5);
+
+    font-family: monospace;
+    font-size: 9px;
+}
+
+.enrollment-details strong {
+    font-size: 13px;
+}
+
+.enrollment-details .button {
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   FAQ
+   ========================================= */
+
+.faq {
+    padding: 125px 0;
+}
+
+.faq-list {
+    border-top: 1px solid var(--line);
+}
+
+.faq details {
+    border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 24px 0;
+
+    cursor: pointer;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary span {
+    font-family: monospace;
+    font-weight: 400;
+
+    transition: transform 0.2s ease;
+}
+
+.faq details[open] summary span {
+    transform: rotate(45deg);
+}
+
+.faq details p {
+    max-width: 700px;
+
+    padding: 0 50px 25px 0;
+
+    color: var(--muted);
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 35px 0;
+
+    border-top: 1px solid var(--line);
+    background: var(--cream);
+}
+
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer p {
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .hero-grid,
+    .about-grid,
+    .learning-intro,
+    .services-heading,
+    .statement-grid,
+    .contact-grid,
+    .business-intro-grid,
+    .lab-process-heading,
+    .business-pathway-heading,
+    .skills-heading,
+    .market-inner,
+    .parent-grid,
+    .enrollment-card {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero-note {
+        justify-content: flex-start;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .approach-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .statement-side {
+        padding-left: 0;
+        padding-top: 25px;
+
+        border-left: none;
+        border-top: 1px solid rgba(251, 250, 247, 0.2);
+    }
+
+    .offer-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .offer-strip > div:nth-child(2) {
+        border-right: none;
+    }
+
+    .offer-strip > div:nth-child(1),
+    .offer-strip > div:nth-child(2) {
+        border-bottom: 1px solid var(--line);
+    }
+
+    .enrollment-details {
+        padding-left: 0;
+        padding-top: 30px;
+
+        border-left: none;
+        border-top: 1px solid rgba(251, 250, 247, 0.2);
+    }
+
+    .business-card-head {
+        grid-template-columns: 60px 170px 1fr 45px;
+    }
+
+    .business-card-body {
+        padding-left: 230px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: calc(100% - 32px);
+    }
+
+    nav,
+    .header-button {
+        display: none;
+    }
+
+    .hero {
+        padding: 85px 0 100px;
+    }
+
+    .hero h1 {
+        font-size: 53px;
+    }
+
+    .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .idea-paper {
+        width: 300px;
+        min-height: 370px;
+    }
+
+    .idea-paper h2 {
+        font-size: 35px;
+    }
+
+    .about,
+    .learning,
+    .services,
+    .contact,
+    .business-intro,
+    .lab-process,
+    .skills-section,
+    .parent-section,
+    .faq {
+        padding: 90px 0;
+    }
+
+    .section-label {
+        margin-bottom: 40px;
+    }
+
+    .about h2,
+    .learning h2,
+    .services h2,
+    .contact h2,
+    .business-intro h2,
+    .lab-process-heading h2,
+    .business-pathway-heading h2,
+    .skills-heading h2,
+    .parent-grid h2 {
+        font-size: 48px;
+    }
+
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .approach-item,
+    .approach-item:nth-child(2) {
+        margin-right: 0;
+        padding-right: 0;
+
+        border-right: none;
+    }
+
+    .service-row {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .service-arrow {
+        display: none;
+    }
+
+    .featured-row {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+
+    /* BUSINESS LAB */
+
+    .business-hero {
+        padding: 80px 0 0;
+    }
+
+    .business-hero h1 {
+        font-size: 68px;
+    }
+
+    .business-hero-subtitle {
+        font-size: 16px;
+    }
+
+    .offer-strip {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+    }
+
+    .offer-strip > div {
+        border-right: none !important;
+        border-bottom: 1px solid var(--line);
+    }
+
+    .offer-strip > div:last-child {
+        border-bottom: none;
+    }
+
+    .business-cards {
+        width: calc(100% - 32px);
+    }
+
+    .business-card-head {
+        grid-template-columns: 40px 1fr 40px;
+
+        padding: 25px 15px;
+    }
+
+    .business-card-description {
+        display: none;
+    }
+
+    .business-card-title h3 {
+        font-size: 32px;
+    }
+
+    .business-card-body {
+        padding: 0 15px 35px;
+    }
+
+    .business-ideas {
+        grid-template-columns: 1fr;
+    }
+
+    .business-ideas > div {
+        min-height: auto;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill {
+        min-height: auto;
+
+        margin-right: 0;
+        padding-right: 0;
+
+        border-right: none;
+    }
+
+    .market {
+        padding: 90px 0;
+    }
+
+    .market h2 {
+        font-size: 55px;
+    }
+
+    .market-copy {
+        padding-top: 0;
+    }
+
+    .enrollment-card {
+        padding: 30px 24px;
+    }
+
+    .enrollment-main h2 {
+        font-size: 48px;
+    }
+
+    .enrollment-details div {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .timeline-item {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1,
+    .business-hero h1 {
+        font-size: 48px;
+    }
+
+    .idea-paper {
+        width: 100%;
+    }
+
+}
+/* =========================================
+SIGNUP PAGE
+========================================= */
+
+.signup-hero {
+padding: 105px 0 95px;
+background: var(--cream);
+}
+
+.signup-hero h1 {
+max-width: 850px;
+margin-top: 20px;
+font-size: clamp(60px, 8vw, 100px);
+}
+
+.signup-hero h1 em {
+display: block;
+color: var(--orange);
+}
+
+.signup-intro {
+max-width: 650px;
+margin-top: 30px;
+color: var(--muted);
+font-size: 17px;
+font-weight: 500;
+line-height: 1.8;
+}
+
+/* =========================================
+SIGNUP SECTION
+========================================= */
+
+.signup-section {
+padding: 120px 0 140px;
+}
+
+.signup-layout {
+display: grid;
+grid-template-columns: 0.7fr 1fr;
+gap: 110px;
+align-items: start;
+}
+
+.signup-side {
+position: sticky;
+top: 40px;
+}
+
+.signup-side h2 {
+max-width: 450px;
+font-size: clamp(45px, 5vw, 65px);
+}
+
+.signup-side h2 em {
+color: var(--blue);
+}
+
+.signup-side > p:last-child {
+max-width: 360px;
+margin-top: 25px;
+color: var(--muted);
+font-size: 15px;
+line-height: 1.8;
+}
+
+/* =========================================
+FORM
+========================================= */
+
+.signup-form {
+max-width: 700px;
+border-top: 1px solid var(--ink);
+}
+
+.form-group {
+padding: 30px 0;
+border-bottom: 1px solid var(--line);
+}
+
+.form-group > label:first-child {
+display: block;
+margin-bottom: 12px;
+font-size: 16px;
+font-weight: 700;
+}
+
+.field-help {
+max-width: 600px;
+margin: -3px 0 15px;
+color: var(--muted);
+font-size: 12px;
+line-height: 1.6;
+}
+
+/* =========================================
+INPUTS
+========================================= */
+
+.signup-form input[type="text"],
+.signup-form select,
+.signup-form textarea {
+width: 100%;
+padding: 15px 16px;
+border: 1px solid var(--line);
+border-radius: 0;
+outline: none;
+background: var(--paper);
+color: var(--ink);
+font-family: var(--sans);
+font-size: 14px;
+transition:
+border-color 0.2s ease,
+box-shadow 0.2s ease;
+}
+
+.signup-form input[type="text"]::placeholder,
+.signup-form textarea::placeholder {
+color: #9a9b96;
+}
+
+.signup-form input[type="text"]:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+border-color: var(--ink);
+box-shadow: 4px 4px 0 rgba(37, 39, 36, 0.08);
+}
+
+.signup-form textarea {
+min-height: 145px;
+resize: vertical;
+line-height: 1.7;
+}
+
+.signup-form select {
+cursor: pointer;
+appearance: none;
+background-image:
+linear-gradient(45deg, transparent 50%, var(--ink) 50%),
+linear-gradient(135deg, var(--ink) 50%, transparent 50%);
+background-position:
+calc(100% - 19px) 21px,
+calc(100% - 14px) 21px;
+background-size: 5px 5px, 5px 5px;
+background-repeat: no-repeat;
+}
+
+/* =========================================
+CHECKBOXES
+========================================= */
+
+.checkbox-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 10px;
+margin-top: 18px;
+}
+
+.checkbox-option {
+position: relative;
+display: flex;
+align-items: center;
+min-height: 52px;
+padding: 13px 15px;
+border: 1px solid var(--line);
+background: var(--paper);
+cursor: pointer;
+transition:
+background 0.2s ease,
+border-color 0.2s ease,
+transform 0.2s ease;
+}
+
+.checkbox-option:hover {
+background: var(--cream);
+border-color: var(--ink);
+transform: translateY(-1px);
+}
+
+.checkbox-option input {
+position: absolute;
+opacity: 0;
+pointer-events: none;
+}
+
+.checkbox-option span {
+position: relative;
+padding-left: 28px;
+color: var(--ink);
+font-size: 13px;
+font-weight: 600;
+}
+
+.checkbox-option span::before {
+content: "";
+position: absolute;
+left: 0;
+top: 50%;
+width: 16px;
+height: 16px;
+border: 1px solid var(--ink);
+transform: translateY(-50%);
+}
+
+.checkbox-option input:checked + span::before {
+background: var(--orange);
+border-color: var(--orange);
+}
+
+.checkbox-option input:checked + span::after {
+content: "✓";
+position: absolute;
+left: 3px;
+top: 50%;
+color: var(--paper);
+font-size: 11px;
+font-weight: 700;
+line-height: 1;
+transform: translateY(-50%);
+}
+
+/* =========================================
+FORM SUBMIT
+========================================= */
+
+.form-submit {
+display: flex;
+align-items: center;
+gap: 25px;
+padding-top: 35px;
+}
+
+.form-submit .button {
+border: none;
+cursor: pointer;
+}
+
+.form-submit p {
+max-width: 280px;
+color: var(--muted);
+font-size: 11px;
+line-height: 1.6;
+}
+
+/* =========================================
+SIGNUP MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+
+.signup-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+}
+
+.signup-side {
+    position: static;
+}
+
+.signup-side h2 {
+    max-width: 650px;
+}
+
+.signup-side > p:last-child {
+    max-width: 600px;
+}
+
+
+}
+
+@media (max-width: 650px) {
+
+
+.signup-hero {
+    padding: 80px 0 75px;
+}
+
+.signup-hero h1 {
+    font-size: 55px;
+}
+
+.signup-intro {
+    font-size: 15px;
+}
+
+.signup-section {
+    padding: 80px 0 100px;
+}
+
+.signup-side h2 {
+    font-size: 45px;
+}
+
+.signup-form {
+    width: 100%;
+}
+
+.form-group {
+    padding: 25px 0;
+}
+
+.checkbox-grid {
+    grid-template-columns: 1fr;
+}
+
+.form-submit {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-submit .button {
+    width: 100%;
+}
+
+
+}
+
+@media (max-width: 400px) {
+
+
+.signup-hero h1 {
+    font-size: 48px;
+}
+
+}
